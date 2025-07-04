@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fb;
+    color: #1e1e1e;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #1e1e1e;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0077cc;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    font-size: 1rem;
+}
+
+section.sobre-loja {
+    padding: 40px 0;
+    background-color: #e3f1fc;
+}
+
+.sobre-loja .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.sobre-loja img {
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-loja .descricao {
+    flex: 1;
+}
+
+.sobre-loja h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #0f2e57;
+    border-bottom: 2px solid #3b6ea5;
+    padding-bottom: 5px;
+}
+
+.sobre-loja p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+section.produtos {
+    padding: 40px 0;
+    background-color: #f1f1f1;
+}
+
+.produtos h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.produtos .container:last-of-type {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.produto {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+}
+
+.produto img {
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.produto h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+}
+
+.produto p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.produto button {
+    background-color: #1e1e1e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.produto button:hover {
+    background-color: #0077cc;
+}
+
+section.contato {
+    padding: 40px 0;
+    background-color: #d6e9f9;
+}
+
+.contato .container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0f2e57;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    color: #1c355e;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #1e1e1e;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #0077cc;
+}
+
+footer {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.95rem;
+    margin-top: 40px;
+}
+
+@media (max-width: 640px) {
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sobre-loja .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-loja img {
+        margin: 0 auto;
+    }
+
+    .produtos .container:last-of-type {
+        grid-template-columns: 1fr;
+    }
+
+    .contato form {
+        width: 100%;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    .produtos .container:last-of-type {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre-loja .container {
+        flex-direction: row;
+    }
+
+    .sobre-loja img {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .produtos .container:last-of-type {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
